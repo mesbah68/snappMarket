@@ -1,0 +1,21 @@
+{
+    "article": {
+        "slug": "how-to-train-your-dragon-rj556z",
+        "title": "How to train your dragon",
+        "description": "Ever wonder how?",
+        "body": "Very carefully.",
+        "createdAt": "2019-07-17T15:10:34.371Z",
+        "updatedAt": "2019-07-17T15:10:34.371Z",
+        "tagList": [
+            "dragons",
+            "training"
+        ],
+        "favorited": false,
+        "favoritesCount": 0,
+        "author": {
+            "username": "johnjacob",
+            "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+            "following": false
+        }
+    }
+}

@@ -1,0 +1,567 @@
+@import 'sassStyle/variables';
+@import '../css/iran-sans.css';
+
+
+//
+ body {
+ font-family: $globalFont !important;
+}
+
+html {
+  font-family: $globalFont !important;
+}
+
+html, body {
+  width: $fullSize;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  color: $black;
+  font-size: $globalFont
+}
+
+body {
+  position: relative;
+  margin-bottom: 0;
+  header {
+    .banner {
+      min-height: $defaultRem * 30;
+      text-align: center;
+      background-image: linear-gradient(-90deg, #392cb0, #c972d8);
+      nav {
+        padding-top: $defaultRem * 2;
+        background: none;
+        ul {
+          li {
+            .nav-link {
+              color: #fff !important;
+            }
+            &:last-child {
+              margin-left: $defaultRem * 3;
+              @media only screen and (max-width: $customWidth) {
+                margin: 0 30%;
+              }
+              @media only screen and (max-width: $smartPhoneWidth) {
+                margin: 0;
+              }
+            }
+          }
+        }
+        button {
+          &.header-btn-primary {
+            padding : $defaultRem * 2 ;
+            font-family: IRANSans;
+            border: $defaultRem * 0.1 solid #fff;
+            min-height: $defaultRem * 2.5;
+            font-size: $defaultRem * 1.1;
+            color: #fff;
+            cursor: pointer;
+            border-radius: $defaultRem * 0.2;
+            padding: 0 $defaultRem * 1.5;
+            width: 100%;
+            background-color: transparent !important;
+            border-radius: $defaultRem * 1.5;
+          }
+        }
+      }
+      .banner-content {
+        color: #fff;
+        padding-top: $defaultRem * 11;
+        @media only screen and (max-width: $customWidth) {
+          padding: $defaultRem * 5 0;
+        }
+        h2 {
+          font-size: $defaultRem;
+        }
+      }
+    }
+  }
+  main {
+    padding-top: $defaultRem * 6;
+    .blog {
+      .main-article-nav {
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        .item {
+          box-shadow: 0px 9px 22px #e2e2e2;
+          margin: $defaultRem 0;
+          border-radius: $defaultRem * 0.5;
+          .cover-item {
+            min-height: $defaultRem * 17.5;
+            background-color: #ccc;
+            border-radius: $defaultRem * 0.5 $defaultRem * 0.5 0 0
+          }
+          .item-content {
+            padding: $defaultRem $defaultRem * 1.5;
+            color:#000;
+            padding-top: $defaultRem;
+            > h2 {
+              font-size: $defaultRem * 1.2;
+            }
+            > span {
+              font-size: $defaultRem * 0.8;
+              color: rgb(165, 164, 164)
+            }
+          }
+        }
+      }
+      
+    }
+    .single-blog {
+      .item {
+        margin: $defaultRem 0;
+        .header-item {
+          padding-bottom: $defaultRem * 2;
+          > h2 {
+            font-size: $defaultRem * 2.4;
+            font-weight: bold;
+          }
+          > span {
+            font-size: $defaultRem * 0.8;
+            color: rgb(165, 164, 164)
+          }
+        }
+        .cover-item {
+          min-height: $defaultRem * 25;
+          background-color: #ccc;
+        }
+        .item-content {
+          padding: $defaultRem 0;
+          color:#000;
+          padding-top: $defaultRem;
+        }
+        .footer-item {
+          .social-media {
+            display: inline-block;
+            ul {
+              padding: 0;
+              li {
+                display: inline-block;
+                padding-right: $defaultRem * 0.2
+              }
+            }
+          }
+          .tag-item {
+            display: inline-block;
+            float: right;
+            @media only screen and (max-width: $smartPhoneWidth) {
+              padding-top: $defaultRem ;
+              padding-bottom: $defaultRem * 2;
+            }
+            > label {
+              padding: 0 $defaultRem * 5;
+              @media only screen and (max-width: $tabletWidth +1) {
+                padding: 0 $defaultRem ;
+              }
+            }
+            > span {
+              padding : 0 $defaultRem ;
+              margin: 0 $defaultRem;
+              border: 1px solid #ccccccb3;
+              border-radius: $defaultRem * 0.2;
+            }
+          }
+        }
+      }
+      .write-comment {
+        padding-top: $defaultRem * 3;
+        > span {
+          font-size: $defaultRem * 1.3;
+          font-weight: bold;
+        }
+        > form {
+          padding-top: $defaultRem * 2;
+          padding-bottom: $defaultRem * 2;
+          .form-group {
+            position: relative;
+            &:not(:last-child) {
+              width: 50%;
+              display: inline-block;
+              @media only screen and (max-width: $smartPhoneWidth)  {
+                width: 100%;
+              }
+            }
+            &:first-child {
+              padding-right: $defaultRem * 2.5;
+              @media only screen and (max-width: $smartPhoneWidth)  {
+                padding-right: 0;
+              }
+            }
+            > input {
+              min-height: $defaultRem * 3.5;
+              &.is-invalid {
+                border-color: #dc3545;
+              }
+              &.success {
+                border-color: green;
+              }
+            }
+            > textarea {
+              &.is-invalid {
+                border-color: #dc3545;
+              }
+              &.success {
+                border-color: green;
+              }
+            }
+            > span {
+              z-index: 999;
+              font-size: $defaultRem * 0.6;
+              color: #fff;
+              position: absolute;
+              bottom: $defaultRem * -1.5;
+              background-color: rgba(188,0,36,0.81);
+              padding: $defaultRem * 0.5;;
+              border-radius: $defaultRem * 0.3;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent rgba(188,0,36,0.81) transparent;
+              }
+            }
+          }
+          .register-form-footer {
+            .register-btn {
+              display: inline-block;
+              button {
+                background-color: #3b2eb1;
+                color: #fff;
+                border-radius: $defaultRem  * 2;
+                padding: $defaultRem * 0.8 $defaultRem * 2;
+              }
+            }
+          }
+        }
+      }
+      .posted-comment {
+        .comments {
+          padding: 0;
+          .top-comment {
+            list-style-type: none;
+            .pic-item {
+              width: $defaultRem * 11.3;
+              height: $defaultRem * 11.3;
+              border-radius: $defaultRem * 0.2;
+              background-color: #ccc;
+              display: inline-block;
+            }
+            .caption-item {
+              display: inline-block;
+              max-width: 72%;
+              line-height: $defaultRem * 1.5;
+              vertical-align: top;
+              padding-left: $defaultRem;
+              @media only screen and (max-width: $smartPhoneWidth)  {
+                max-width: 100%;
+              }
+              > span {
+                display: inline-block;
+                width: 100%;
+                &.post-name-item {
+                  font-weight: bold;
+                }
+                &.post-editor {
+                  color: #ada8a8;
+                  font-size: $defaultRem * 0.8;
+                }
+              }
+              > p {
+                font-size: $defaultRem * 0.9;
+              }
+            }
+          }
+          .middle-comment {
+            padding-top: $defaultRem * 4;
+            list-style-type: none;
+            .header-caption {
+              font-size: $defaultRem * 1.5;
+              font-weight: bold;
+              display: inline-block;
+              width: 100%;
+              padding-bottom: $defaultRem * 2;
+            }
+            .pic-item {
+              width: $defaultRem * 5;
+              height: $defaultRem * 5;
+              border-radius: $defaultRem * 0.2;
+              background-color: #ccc;
+              display: inline-block;
+            }
+            .caption-item {
+              display: inline-block;
+              max-width: 72%;
+              line-height: $defaultRem * 1.5;
+              vertical-align: top;
+              padding-left: $defaultRem;
+              > span {
+                display: inline-block;
+                width: 100%;
+                &.post-name-item {
+                  font-weight: bold;
+                }
+                &.post-editor {
+                  color: #ada8a8;
+                  font-size: $defaultRem * 0.8;
+                }
+              }
+              > p {
+                font-size: $defaultRem * 0.9;
+              }
+              .reply-comment {
+                .reply-btn {
+                  display: inline-block;
+                  button {
+                    background-color: #3b2eb1;
+                    color: #fff;
+                    border-radius: $defaultRem  * 2;
+                    padding: $defaultRem * 0.4 $defaultRem * 1.5;
+                  }
+                }
+              }
+            }
+          }
+          .last-comment {
+            padding-top: $defaultRem * 2;
+            padding-left: $defaultRem * 6;
+            list-style-type: none;
+            .header-caption {
+              font-size: $defaultRem * 1.5;
+              font-weight: bold;
+              display: inline-block;
+              width: 100%;
+              padding-bottom: $defaultRem * 2;
+            }
+            .pic-item {
+              width: $defaultRem * 5;
+              height: $defaultRem * 5;
+              border-radius: $defaultRem * 0.2;
+              background-color: #ccc;
+              display: inline-block;
+            }
+            .caption-item {
+              display: inline-block;
+              max-width: 72%;
+              line-height: $defaultRem * 1.5;
+              vertical-align: top;
+              padding-left: $defaultRem;
+              @media only screen and (max-width: $smartPhoneWidth)  {
+                max-width: 100%;
+              }
+              > span {
+                display: inline-block;
+                width: 100%;
+                &.post-name-item {
+                  font-weight: bold;
+                }
+                &.post-editor {
+                  color: #ada8a8;
+                  font-size: $defaultRem * 0.8;
+                }
+              }
+              > p {
+                font-size: $defaultRem * 0.9;
+              }
+              .reply-comment {
+                .reply-btn {
+                  display: inline-block;
+                  button {
+                    background-color: #3b2eb1;
+                    color: #fff;
+                    border-radius: $defaultRem  * 2;
+                    padding: $defaultRem * 0.4 $defaultRem * 1.5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    }
+    .sidebar {
+      padding-top: $defaultRem * 2.5;
+      .category {
+        form {
+          display: inline-block;
+          position: relative;
+          .category-search-input {
+            border-radius: $defaultRem * 2;
+            min-height: $defaultRem * 3;
+            :-webkit-input-placeholder{
+              color: red !important;
+            }
+          }
+          button {
+            background: none;
+            border: none;
+            position: absolute;
+            right: $defaultRem * 0.5;
+            top: $defaultRem * 0.5;
+            cursor: pointer;
+          }
+        }
+        .category-items {
+          padding-top: $defaultRem * 2;
+          padding-right: $defaultRem * 7;
+          > span {
+            font-size: $defaultRem * 1.1;
+            font-weight: bold;
+          }
+          > ul {
+            padding: 0 $defaultRem * 0.5;
+            li {
+              font-size: $defaultRem * 0.9;
+              list-style-type: none;
+              border-bottom: $defaultRem * 0.08 solid #cccccc85;
+              &.active {
+                color: blue;
+                font-weight: bold;
+              }
+              > a {
+                padding: $defaultRem * 0.5 ;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .latest-posts {
+        .post-items {
+          padding-top: $defaultRem * 4;
+          > span {
+            font-size: $defaultRem * 1.1;
+            font-weight: bold;
+          }
+          > ul {
+            padding: 0 $defaultRem * 0.5;
+            li {
+              font-size: $defaultRem * 0.9;
+              list-style-type: none;
+              > a {
+                padding: $defaultRem * 0.5 ;
+                cursor: pointer;
+                .pic-item {
+                  width: $defaultRem * 4.5;
+                  background-color: #ccc;
+                  height: $defaultRem * 4.5;
+                  display: inline-block;
+                }
+                .caption-item {
+                  display: inline-block;
+                  max-width: 72%;
+                  line-height: $defaultRem * 1.5;
+                  vertical-align: top;
+                  padding-left: $defaultRem;
+                  > span {
+                    display: inline-block;
+                    &.latest-post-date {
+                      color: #ada8a8;
+                      font-size: $defaultRem * 0.8;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    margin-top: $defaultRem * 4;
+    background-image: linear-gradient(-90deg, #392cb0, #c972d8);
+    .footer-top {
+      text-align: center;
+      .footer-content {
+        color: #fff;
+        padding : $defaultRem * 8 0 0;
+        > h2 {
+          font-size: $defaultRem * 2;
+          letter-spacing: $defaultRem * 0.1;
+        }
+        .footer-caption {
+          padding-top: $defaultRem ;
+          max-width: 100%;
+          display: inline-block;
+          line-height: $defaultRem * 1.5;
+          padding-bottom: $defaultRem * 3;
+          > span {
+            font-size: $defaultRem * 0.8;
+          }
+        }
+        form {
+          display: inline-block;
+          width: 100%;
+          position: relative;
+          .subscribe-email-input {
+            border-radius: $defaultRem * 2;
+            min-height: $defaultRem * 3.5;
+            padding : 0 $defaultRem * 0.5 0 $defaultRem * 1.5;
+            :-webkit-input-placeholder{
+              color: red !important;
+            }
+          }
+          button {
+            border: none;
+            position: absolute;
+            right: $defaultRem * 0.5;
+            top: $defaultRem * 0.5;
+            background-color: #3118a7;
+            border-radius: $defaultRem * 2;
+            min-height: $defaultRem * 2.9;
+            color: #fff;
+            position: absolute;
+            right: $defaultRem * 0.5;
+            top: $defaultRem * 0.3;
+            cursor: pointer;
+            width: 30%;
+            @media only screen and (max-width: $smartPhoneWidth) {
+              top: $defaultRem * -0.2;
+            }
+            @media (min-width: 480px) and (max-width: 575px) {
+              top: $defaultRem * -0.2;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      background-color: #00000017;
+      margin-top: $defaultRem * 8;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      .left-side {
+        padding-top: $defaultRem ;
+        padding-bottom: $defaultRem;
+        > span {
+          color: #fff;
+          font-size: $defaultRem * 0.8;
+        }
+      }
+      .right-side {
+        padding-top: $defaultRem ;
+        .footer-nav {
+          padding: 0;
+          margin: 0;
+          li {
+            display: inline-block;
+            text-decoration: none;
+            > a {
+              color: #fff;
+              font-size: $defaultRem * 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
